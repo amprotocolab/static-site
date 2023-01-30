@@ -1,12 +1,13 @@
 import React from "react";
 //import {Link} from 'react-router-dom';
-
+import logo from 'F:/AMProtocol/project/my-app/src/asset/logo_transparent.png';
 import "./navigation.styles.scss";
 
 const Navigation = () =>{
     return(
         <div className="navigation">
-                <nav className="navBar">
+            <img className="logo" src = {logo} />
+            <nav className="navBar">
                     < ul className = "navlinkBar" >
                         <li><a className="nav-link"  href = '/home'>Home</a></li>
                         <li><a className="nav-link"  href = '/about'>About       </a></li>

@@ -3,16 +3,22 @@ $theme: rgb(70, 105, 145);
 $blue : #449dd4;
 
 .navigation {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   margin-bottom: 25px;
   justify-content: flex-end;
   padding-right: 100px;
   background-color: $theme;
-  position:sticky;
-  overflow: hidden;
+
+.logo{
+    position: relative;
+    right: 450px;
+    
+}
 
 .navBar{
     padding: 0px 30px;
