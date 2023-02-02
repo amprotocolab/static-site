@@ -1,0 +1,52 @@
+$light-color: #f8f8f8;
+//$theme: rgb(70, 105, 145);
+$theme :rgb(55, 81, 126);
+$blue : #449dd4;
+
+.contain{
+  width: 100%;
+  height: 500px;
+  margin: 0px ;
+  padding: 40px;
+  justify-content: center;
+  background-color: $theme;
+  display:grid;
+  grid-template-columns: 1fr 1fr
+}
+h1{
+    font-size: 50px;
+    font-weight: 700;
+    color:$light-color
+}
+h2{
+    font-size: 26px;
+    color:$light-color
+}
+.img-hero{
+    width: 480px;
+    height: 880px;
+    animation-name: float;
+    
+    
+}
+
+@keyframes float {
+	0% {
+		//box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(10px);
+	}
+	50% {
+		//box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-10px);
+	}
+	100% {
+		//box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(10px);
+	}
+}
+
+#hero{
+    //animation: up-down 1s ease-in-out infinite alternate-reverse both;
+    transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
