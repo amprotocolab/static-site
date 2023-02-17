@@ -7,13 +7,12 @@ $skyblue : #007ac6;
 .button{
     border-radius: 25px;
     width : 120px;
-    padding : 5px;
+    margin: 0px 0px 0px 20px;
+    padding: 5px 5px;
     font-size: 16px;
     font-weight: 500;
     transition-duration: 0.2s;
     border: 3px solid $blue;
-    //color : $light-color;
-    //background-color: transparent;
     transition-duration: 0.4s;  
     
 
@@ -43,10 +42,4 @@ $skyblue : #007ac6;
       border: none;
     }
   }
-}
-
-.button-container{
-    width: fit-content;
-    align-items: center;
-    padding: 0px;
 }

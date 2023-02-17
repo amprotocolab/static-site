@@ -1,198 +1,324 @@
 $light-color: #f8f8f8;
-//$theme: rgb(70, 105, 145);
-$theme :rgb(55, 81, 126);
+$theme: #37517eb7;
 $blue : #449dd4;
 
-.navbar {
-  
+.navbar {    
   //position: sticky;
   top: 0;
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  padding: 20px 40px 20px 60px;
+  padding: 20px 60px;
   background-color: $theme;
-  //padding-bottom: 10px;
-  overflow: hidden;
+  align-content: center;
+  overflow:visible;    
 
 .logo{
-    position: relative;
-    //right: 450px;
-    width :70px;
-    height: 70px;
+   // position: relative;
+  //right: 450px;
+    width :50px;
+    height: 50px;
     display:flex;
     justify-content: flex-start;
     flex:baseline;
-    margin-top: 10px;
-
+    position: relative;
+    grid-column: 1/2;
+  }
+ }
+.collapse{
+  padding-bottom: 18px;
+  overflow:visible;    
 }
 
-
- .navlinkBar{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    //align-items: center;
-    justify-content: flex-end;
-    padding: 15px;
-    list-style-type: none;
-    margin: 0px;
-        
-
-    .nav-link {
-      height: 100%;
-      padding: 12px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 500;
-      width: fit-content;
-      text-decoration: none;
-      color:$light-color
-    }
-  }
+.container{
+  display: grid;
+  grid-template-columns: 5rem 1fr 3fr 5rem;
+  padding-right: 0px;
+  width: 60%;
+}
+.row{
+  //height: fit-content;
+  width: 100%; 
+  display: block;
+  overflow: hidden;
+  // height: 7rem;
  
 }
-// #navbarDropdown{
-//       box-sizing: border-box;
-//       -webkit-box-direction: normal;
-//       white-space: nowrap;
-// }
 
-
-// @media (max-width: 1366px) {
-//   .navigation{
-//     left: -90%;
-//   }
-//   .navigation {
-//     left: -100%;
-//   }
-// }
-// .dropdown {
-//   float: left;
-//   overflow: hidden;
-
-// }
-// .dropdown .nav-link {
-//   font-size: 16px;
-//   border: none;
-//   outline: none;
-//   color: $light-color;
-//   padding: 14px 16px;
-//   background-color: inherit;
-//   font-family: inherit; /* Important for vertical align on mobile phones */
-//   margin: 0; /* Important for vertical align on mobile phones */
-//   font-size: 18px;
-//   font-weight: 600;
+#navbar.header-scrolled,
+#navbar.header-inner-pages {
+  background-color: rgba(40, 58, 90, 0.9);
   
-// }
-// .dropdown-menu {
-//   display: none;
-//   position: absolute;
-//   background-color: #f9f9f9;
-//   min-width: 160px;
-//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-//   z-index: 1;
-     
-// }
 
-// /* Links inside the dropdown */
-// .dropdown-menu a {
-//   float: none;
-//   color: black;
-//   padding: 12px 16px;
-//   text-decoration: none;
-//   display: block;
-//   text-align: left;
-// }
-
-// /* Add a grey background color to dropdown links on hover */
-// .dropdown-menu a:hover {
-//   background-color: $theme;
-//   color: $light-color;
-// }
-
-// /* Show the dropdown menu on hover */
-// .dropdown:hover .dropdown-menu {
-//   display: block;
-//   border-radius: 10px;
-// }
-
-// .navbar-toggler-icon{
-//   background-color: white;
-// }
-
-
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
 }
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
+.navbar-toggler{
   border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  width: fit-content;
+  padding: auto;
+  color: #f9f9f9;
+  
 }
 
 
 
-/* Dropdown content (hidden by default) */
-.dropdown-content {
+
+
+
+
+
+
+
+
+
+@media (max-width :998px){
+  .container{
+    align-items: center;
+    height: fit-content;
+  }
+  .row{
+    width : 100%;
+    // padding: 0px 0px 60px 0px;
+    // grid-template-columns: 1fr 1fr;
+    height: 3rem;
+    overflow: hidden;
+
+  }
+  .logo{
+    margin: 0px 0px 0px 42px;
+    position: relative;
+    
+  }
+    .navbar-toggler{
+      //display: flex;
+      position: relative;
+      justify-content:space-around;
+      padding: 0px;
+      bottom :86%;
+      left: 94%;
+
+   }
+  //  .nav-item{
+  //   width: 1000px;
+  //   visibility: visible;
+  //  }
+
+
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
   display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+
+
+
+
+
+@media (max-width: 991px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+.collapse {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(40, 58, 90, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.collapse .navlinkBar {
+  display: flex;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 3;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 10px ;
+  margin:10px;
+  border-radius: 10px;
+  background-color: $light-color;
+  overflow-y: auto;
+  transition: 0.3s;
+
+  width : 95%;
+  height : 85%;
+  
+}
+.collapse .navlinkBar .nav-item .nav-link{
+  font-size: 16px;
+  color: $theme;
+  width : 100%;
+  height : 20%;
+    &:hover {
+      color:$blue;
+    }
+
+
+    text-align: center;
+}
+.collapse .navlinkBar .nav-item .dropdown .nav-link{
+    align-items: center;
+}
+.collapse .navlinkBar .nav-item .active{
+  color: $blue;
+
+}
+.collapse .navlinkBar .nav-item{
+  background-color: $light-color;
+  width : 100%;
+  height : 100%;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+.button{
+  width: 100%;
+   &.transparent {
+        background-color: transparent;
+        color: $theme;
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
+    &:hover {
+      background-color: $blue;
+      color:$light-color;
+      border: none;
+    }
   }
 }
 
-.row{
-  justify-content: space-between;
-  height: fit-content;
-  width: 100%; 
-  padding-left: 30px;
-  padding-right: 30px;
+.collapse .mobile-nav-toggle {
+  position: absolute;
+  // top: 15px;
+  // right: 15px;
 }
+
+
+.collapse-mobile a,
+.collapse-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #37517e;
+}
+
+.collapse-mobile a:hover,
+.collapse-mobile .active,
+.collapse-mobile li:hover>a {
+  color: #47b2e4;
+}
+
+.collapse-mobile .getstarted,
+.collapse-mobile .getstarted:focus {
+  margin: 15px;
+  color: #37517e;
+}
+
+.collapse-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.collapse-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.collapse-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.collapse-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.collapse-mobile .dropdown ul a:hover,
+.collapse-mobile .dropdown ul .active:hover,
+.collapse-mobile .dropdown ul li:hover>a {
+  color: #47b2e4;
+}
+
+.collapse-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+@media (min-width :427px){
+  .container{
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+  }
+  .row{
+    width : 100%;
+    // padding: 0px 0px 60px 0px;
+    // grid-template-columns: 1fr 1fr;
+    height: 3rem;
+    overflow: hidden;
+    padding: 0px 1px;
+
+  }
+  .logo{
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    
+  }
+    .navbar-toggler{
+      //display: flex;
+      position: relative;
+      justify-content:space-around;
+      padding: 0px;
+      bottom :86%;
+      left: 94%;
+
+   }
+  //  .navbar{
+  //   padding: 10px 0px;
+  //   justify-content: center;
+  // }
+}
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,10 @@
+$light-color: #f8f8f8;
+//$theme: rgb(70, 105, 145);
+$theme :rgb(55, 81, 126);
+$theme2 :rgb(18, 37, 70);
+$blue : #449dd4;
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +18,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+  
+        /* Designing for scroll-bar */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+     
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: $light-color;
+            //border-radius: 15px;
+        }
+     
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: $theme2;
+            //border-radius: 15px;
+        }
+     
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: $theme2;
+        }
