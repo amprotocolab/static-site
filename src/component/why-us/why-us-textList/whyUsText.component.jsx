@@ -1,29 +1,33 @@
-import "./whyUsText.styles.scss";
-import { useContext } from "react";
-import { WhyUsContext } from "../../../contexts/whyus.context";
+import {WhyUsBlock,Slider,Count,TextOutside,ChevronIcon} from "./whyUsText.styles";
+
 import SliderIcon from "./sliderIcon/sliderIcon.component";
 
 
-const WhyUsText = ({count ,textInside, textOutside}) =>{
+const WhyUsText = ({count ,textInside, textOutside,isFirstSliderOpen}) =>{
 
-    const {isSliderOpen , setIsSliderOpen} = useContext(WhyUsContext);
-    const toggleIsSliderOpen = () => setIsSliderOpen(!isSliderOpen); 
 
     return(
         <>
-        <li className="whyUsBlock">
-            <a >
-                <span>{count}</span>
-                <span> {textOutside}</span>
-                <span> <SliderIcon /></span>
-            </a>
-            <div>
+        <WhyUsBlock>
+            <Slider  >
+                <TextOutside> 
+                    <Count>
+                        {count}
+                    </Count>
+
+                    {textOutside}
+                </TextOutside>
+                
+                <ChevronIcon> <SliderIcon /></ChevronIcon>
+
+            </Slider>
+            <>
                 {
-                    isSliderOpen ? <p>{textInside}</p> : null
+                    isFirstSliderOpen ? <p>{textInside}</p> : null
                 } 
 
-            </div>
-        </li>
+            </>
+        </WhyUsBlock>
         </>              
 
     )

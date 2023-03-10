@@ -1,16 +1,41 @@
-import { useContext } from 'react';
+import {useContext} from 'react';
 import {BiChevronUp,BiChevronDown} from 'react-icons/bi';
-import { WhyUsContext } from '../../../../contexts/whyus.context';
+import {WhyUsContext} from '../../../../context/whyus.context';
 
 const SliderIcon = () => {
-    
-    const {isSliderOpen , setIsSliderOpen} = useContext(WhyUsContext);
-    const toggleIsSliderOpen = () => setIsSliderOpen(!isSliderOpen); 
 
-    return(
-        <div className='slider-icon' onClick={toggleIsSliderOpen}>
-            {isSliderOpen? <BiChevronDown /> : <BiChevronUp />}
-            
+    const {isFirstSliderOpen,setIsFirstSliderOpen} = useContext(WhyUsContext);
+    const {isSecondSliderOpen,setIsSecondSliderOpen} = useContext(WhyUsContext);
+    const {isThirdSliderOpen,setIsThirdSliderOpen} = useContext(WhyUsContext);
+
+    const toggleIsFirstSliderOpen = () => {
+        setIsFirstSliderOpen(!isFirstSliderOpen);
+        setIsSecondSliderOpen(false);
+        setIsThirdSliderOpen(false);
+    }
+    const toggleIsSecondSliderOpen = () => {
+        setIsFirstSliderOpen(false);
+        setIsSecondSliderOpen(!isSecondSliderOpen);
+        setIsThirdSliderOpen(false);
+    }
+    const toggleIsThirdSliderOpen = () => {
+        setIsFirstSliderOpen(false);
+        setIsSecondSliderOpen(false);
+        setIsThirdSliderOpen(!isThirdSliderOpen);
+    }
+
+    return ( 
+        <div className = 'slider-icon' onClick = {toggleIsFirstSliderOpen}>
+        {
+            isFirstSliderOpen ? < BiChevronDown /> : < BiChevronUp />
+        }
+        {
+            isSecondSliderOpen ? < BiChevronDown /> : < BiChevronUp />
+        }
+        {
+            isThirdSliderOpen ? < BiChevronDown /> : < BiChevronUp />
+        }
+
         </div>
     )
 }

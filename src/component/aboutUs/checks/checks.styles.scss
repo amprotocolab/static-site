@@ -1,11 +1,11 @@
 li {
-  //padding: 0px 28px 0px 30px;
+  padding: 0px 0px 0px 30px;
   position: relative;
   
 }
-li:first-child{
-  padding: 0px 0px 0px 30px;  
-}
+// li:first-child{
+//   padding: 0px 0px 0px 30px;  
+// }
 li+li {
   margin-top: 0px;
   padding: 0px 0px 0px 30px;
