@@ -8,33 +8,19 @@ const SliderIcon = () => {
     const {isSecondSliderOpen,setIsSecondSliderOpen} = useContext(WhyUsContext);
     const {isThirdSliderOpen,setIsThirdSliderOpen} = useContext(WhyUsContext);
 
-    const toggleIsFirstSliderOpen = () => {
-        setIsFirstSliderOpen(!isFirstSliderOpen);
-        setIsSecondSliderOpen(false);
-        setIsThirdSliderOpen(false);
-    }
-    const toggleIsSecondSliderOpen = () => {
-        setIsFirstSliderOpen(false);
-        setIsSecondSliderOpen(!isSecondSliderOpen);
-        setIsThirdSliderOpen(false);
-    }
-    const toggleIsThirdSliderOpen = () => {
-        setIsFirstSliderOpen(false);
-        setIsSecondSliderOpen(false);
-        setIsThirdSliderOpen(!isThirdSliderOpen);
-    }
+    
 
     return ( 
-        <div className = 'slider-icon' onClick = {toggleIsFirstSliderOpen}>
+        <div className = 'slider-icon'>
         {
             isFirstSliderOpen ? < BiChevronDown /> : < BiChevronUp />
         }
-        {
+        {/* {
             isSecondSliderOpen ? < BiChevronDown /> : < BiChevronUp />
         }
         {
             isThirdSliderOpen ? < BiChevronDown /> : < BiChevronUp />
-        }
+        } */}
 
         </div>
     )

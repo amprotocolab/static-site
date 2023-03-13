@@ -14,22 +14,22 @@ const Services =() =>{
 
 
                     <div className="row-service">
-                        < ServiceCard 
+                        <ServiceCard 
                             icon = "fa fa-gear"
                             title = "Lorem Ipsum"
                             text = "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi" />
 
-                        < ServiceCard 
+                        <ServiceCard 
                             icon="fa fa-file" 
                             title="Sed ut perspici" 
                             text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore"/> 
 
-                        < ServiceCard 
+                        <ServiceCard 
                             icon = "fa fa-globe"
                             title="Magni Dolores" 
                             text="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia" /> 
 
-                        < ServiceCard 
+                        <ServiceCard 
                             icon="fa fa-user"
                             title="Nemo Enim" 
                             text="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis"/>
